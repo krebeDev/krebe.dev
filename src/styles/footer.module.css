@@ -1,0 +1,11 @@
+@import url('./theme.css');
+
+.footerBar {
+	background: var(--deepBlack);
+}
+
+.footerInner {
+	max-width: 1200px;
+	margin: auto;
+	padding: 1rem;
+}

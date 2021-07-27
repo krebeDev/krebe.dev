@@ -1,0 +1,34 @@
+@import url('./theme.css');
+
+.navBar {
+	max-width: 1200px;
+	margin: auto;
+	padding: 1rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.navMenu {
+	display: flex;
+}
+
+.navItem {
+	margin: 0 0.5rem;
+}
+
+.navLink {
+	color: var(--lightGrey);
+	border-bottom: 0.2rem solid var(--black);
+	padding: 0.2rem 0;
+	transition: cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.navLink:hover {
+	color: var(--copy);
+}
+
+.activeLink {
+	border-color: var(--yellow);
+	color: var(--copy);
+}
