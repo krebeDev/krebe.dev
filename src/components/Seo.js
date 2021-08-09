@@ -35,7 +35,7 @@ const Seo = () => {
 			<meta name='twitter:creator' content={twitterUserName} />
 			<meta name='twitter:description' content={description} />
 			<meta name='twitter:image' content={image} />
-			<link rel='icon' href='./../images/fav.png' />
+			<link rel='icon' href="../../src/images/favicon.png" />
 		</Helmet>
 	)
 }

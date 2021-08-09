@@ -1,0 +1,11 @@
+@import url('./theme.css');
+
+.optin {
+  padding: 1rem;
+  background: var(--veryDeepBlue);
+  margin: 2rem 0;
+}
+
+.formTitle {
+  font-size: 1.5rem;
+}

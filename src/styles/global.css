@@ -13,29 +13,105 @@ html {
 }
 
 body {
-	background-color: var(--black);
+	background-color: var(--deepBlue);
 	font-size: 16px;
-	font-weight: 400;
-	font-family: Helvetica, sans-serif;
-	line-height: 1.5;
+	font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+	line-height: 1.8;
 	color: var(--copy);
 	text-rendering: optimizeSpeed;
 	overflow-x: hidden;
 }
 
-a {
-	/* color: inherit; */
-	text-decoration: none;
-	/* cursor: pointer; */
+#gatsby-focus-wrapper {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	
 }
+
+main {
+	flex: 1 0 auto;
+}
+
+a {
+	text-decoration: none;
+	transition: 0.3s;
+	color: inherit;
+	/* font-weight: 700; */
+}
+
+a:hover {
+	color: var(--copyLight);
+}
+
+h1, h2, h3 {
+	color: var(--copyLight);
+	line-height: 1.3;
+}
+
+h1 {
+	font-size: 2rem;
+}
+
+h2 {
+	font-size: 1.8rem;
+}
+
+h3 {
+	font-size: 1.5rem;
+}
+
 
 ul {
 	padding: 0;
 	list-style-type: none;
 }
 
-h1,
-h2,
-h3 {
-	font-weight: 400;
+button {
+	cursor: pointer;
 }
+
+section {
+	padding: 2rem 0;
+}
+
+.container {
+	max-width: 1200px;
+	margin: auto;
+	padding: 0 1rem;
+}
+
+.flex-centered {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.animate {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	background: var(--deepBlue);
+	z-index: 999;
+	animation: flash .05s steps(100, end); 
+}
+
+@keyframes flash{ 
+	from { 
+			 width: 0; 
+			 } 
+	 }
+
+
+	 @media(min-width:768px) {
+		h1, h2, h3 {
+			color: var(--copyLight);
+			line-height: 1.5;
+		}
+
+		section {
+			padding: 3rem 0;
+		}
+	 }

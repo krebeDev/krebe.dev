@@ -1,0 +1,59 @@
+@import url('./theme.css');
+
+
+.githubLink {
+	font-weight: 700;
+}
+
+.tags {
+	margin: 2rem 0;
+} 
+
+.tag {
+	display: inline-block;
+	margin: 0.25rem 0.5rem 0.25rem 0;
+}
+
+.tagBtn {
+	color: var(--copy);
+	padding: 0.5rem;
+	font-size: 0.75rem;
+	font-weight: 700;
+	border: 1px solid var(--grey);
+	text-transform: uppercase;
+	background: none;
+	transition: .3s;
+}
+
+.activeBtn,
+.tagBtn:hover {
+	background: var(--copyLight);
+	color: var(--deepBlue);
+}
+
+.projectList {
+	position: relative;
+}
+
+.filtering {
+	position: absolute;
+	top: 0;
+	background: var(--deepBlue);
+	width: 100%;
+	height: 100%;
+	
+}
+
+.filterStatus {
+	text-transform: uppercase;
+	white-space: nowrap;
+	animation: filtering 2s steps(50, end); 
+	overflow: hidden;
+	width: 100%;
+}
+
+@keyframes filtering{ 
+	from { 
+			 width: 0; 
+			 } 
+	 }

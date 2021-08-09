@@ -1,0 +1,23 @@
+@import url('./theme.css');
+
+.recommendLink {
+  flex-basis: 49%;
+  padding: 1rem 1rem;
+  background: var(--veryDeepBlue);
+  border: none;
+  border: 1px solid var(--veryDeepBlue);
+}
+
+.recommendLink:hover {
+  border-color: var(--grey);
+}
+
+.direction {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.title {
+  color: var(--lightYellow);
+  display: block;
+}
