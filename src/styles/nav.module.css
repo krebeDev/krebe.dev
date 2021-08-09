@@ -1,34 +1,73 @@
 @import url('./theme.css');
 
 .navBar {
-	max-width: 1200px;
-	margin: auto;
-	padding: 1rem;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	padding: 1.2rem 0;
+	background: var(--deepBlue);
+	position: sticky;
+	top: 0;
+	z-index: 10; 
+}
+
+.logoAnchor {
+	width: 150px;	
 }
 
 .navMenu {
-	display: flex;
+	width: 0.01px;
+	overflow: hidden;
+	transition: 0.1s width;
+	position: fixed;
+	height: 100vh;
+	top: 0;
+	right: 0;
+	background: rgba(11,13,18,0.995);
+}
+
+.expand {
+	width: 100%;
+	padding: 5rem 1.5rem;
+}
+
+.toggleButton {
+	background: none;
+	border: none;
+	position: relative;
+	z-index: 999;
+	width: 2rem;
+}
+
+.toggleButton:focus {
+	outline: none;
+}
+
+.closeIcon {
+	width: 1.5rem;
+	display: inline-block;
 }
 
 .navItem {
-	margin: 0 0.5rem;
+	margin: 1rem 0;
 }
 
 .navLink {
-	color: var(--lightGrey);
-	border-bottom: 0.2rem solid var(--black);
 	padding: 0.2rem 0;
-	transition: cubic-bezier(0.39, 0.575, 0.565, 1);
-}
-
-.navLink:hover {
-	color: var(--copy);
+	text-transform: uppercase;
+	font-weight: 700;
 }
 
 .activeLink {
-	border-color: var(--yellow);
-	color: var(--copy);
+	color: var(--white);
+}
+
+@media (min-width: 768px) {	
+.navBar {
+	padding: 1.5rem 0;
+}
+	.logoAnchor {
+		width: 180px;	
+	}
+	.expand {
+		width: 35rem;
+		padding: 5rem 7.5% 1rem 2rem;
+	}	
 }

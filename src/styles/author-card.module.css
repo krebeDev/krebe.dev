@@ -1,0 +1,32 @@
+@import url('./theme.css');
+
+.authorCard {
+  padding: 1rem;
+  background: var(--veryDeepBlue);
+  display: flex;
+  margin: 2rem 0;
+}
+
+.copy {
+  margin-left: 1rem;
+  flex: 1;
+}
+
+.authorName {
+  font-size: 1.5rem;
+}
+
+.authorName {
+  font-size: 1rem;
+}
+
+.jobTitle {
+  color: var(--copyLight);
+}
+.authorAvatar {
+  border-radius: 50%;
+}
+
+.avatarBox {
+  width: 100px
+}

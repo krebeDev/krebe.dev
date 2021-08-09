@@ -1,0 +1,41 @@
+@import url('./global.css');
+
+.postContent {
+  max-width: 800px;
+}
+
+.postHeader {
+  padding: 2rem 0;
+}
+
+.postTitle {
+  color: var(--lightYellow);
+}
+
+.postTag {
+  display: inline-block;
+  margin: 0.5rem 0.5rem 0.5rem 0;
+}
+
+.postTagButton {
+  color: var(--copy);
+	padding: 0.5rem;
+	font-size: 0.75rem;
+	font-weight: 700;
+	border: 1px solid var(--grey);
+	text-transform: uppercase;
+	background: none;
+	transition: .3s;
+}
+
+.timeToRead {
+  font-size: 0.8rem;
+}
+
+.tagList {
+  margin-top: 0.5rem;
+}
+
+.postBody {
+  margin-bottom: 3rem;
+}

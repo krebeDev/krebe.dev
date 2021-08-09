@@ -1,0 +1,64 @@
+@import url('./theme.css');
+
+.details {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pageTitle {
+  margin-bottom: 1rem;
+}
+
+.copy {
+  order: 2;
+}
+
+.avatarBox {
+  order: 1;
+  flex-basis: 80%;
+  margin-bottom: 2rem;
+}
+
+.photo {
+  border: 3px solid var(--white);
+}
+
+.about .details a {
+  text-decoration: underline;
+}
+
+.stars {
+  display: block;
+  margin-bottom: 3rem;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.downloadLink {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 1.5px;
+  display: inline-block;
+  padding-bottom: 0.1rem;
+  border-bottom: 1px solid var(--grey);
+  margin-top: 2rem;
+}
+
+.downloadIcon {
+  margin-right: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .copy {
+    order: 1;
+    flex-basis: 60%;
+    margin-right: 5%;
+  }
+
+  .avatarBox {
+    order: 2;
+    flex-basis: 35%;
+    margin-bottom: 0;
+  }
+}

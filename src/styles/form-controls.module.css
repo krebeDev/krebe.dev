@@ -1,0 +1,47 @@
+@import url();
+.formGroup {
+  border-bottom: 1px solid var(--grey);
+  margin: 1.5rem 0 1rem 0;
+}
+
+.errorHighlight {
+  color: var(--lightRed);
+}
+
+.errorHighlight::placeholder {
+  color: var(--lightRed);
+}
+
+textarea, input {
+  background: none;
+  border: none;
+  color: var(--copy);
+  width: 90%;
+  padding: 0.5rem 0;
+  margin-left: 0.5rem;
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+  -webkit-text-fill-color: var(--copy);
+  -webkit-box-shadow: 0 0 0px 1000px var(--deepBlue) inset;
+  box-shadow: 0 0 0px 1000px var(--deepBlue) inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+textarea:focus, input:focus{
+  outline: none;
+}
+
+textarea::-webkit-scrollbar {
+  display: none;
+}
+
+label {
+  font-size: 0.7rem;
+  display: block;
+  width: 100%;
+  opacity: 0.8;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
