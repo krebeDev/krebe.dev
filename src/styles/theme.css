@@ -1,8 +1,14 @@
 :root {
-	--black: #303030;
-	--deepBlack: #292828;
+	--deepBlue: #12141c;
+	--veryDeepBlue: #0b0d12;
+	--copy: #abb0b5;
+	--copyLight: #dddfe1;
 	--yellow: #ffa621;
-	--lightYellow: #ffd597;
-	--copy: #f2f2f2;
-	--lightGrey: #d2d2d2;
+	--lightYellow: #ffe6a5;
+	--grey: #626466;
+	--white: #ffffff;
+	--linkedinBlue: #2867B2;
+	--twitterBlue: #1DA1F2;
+	--lightRed: rgb(243, 116, 116);
 }
+	
