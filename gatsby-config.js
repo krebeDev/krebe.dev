@@ -9,7 +9,7 @@ module.exports = {
 				twitter: 'https://twitter.com/krebedev',
 				linkedIn: 'https://linkedin.com/krebedev',
 				github: 'https://github.com/krebedev',
-			}
+			},
 		},
 		siteUrl: 'https://www.krebe.dev',
 		description:
@@ -24,7 +24,7 @@ module.exports = {
 		'gatsby-plugin-react-helmet',
 		'gatsby-plugin-mdx',
 		'gatsby-plugin-fontawesome-css',
-		
+
 		{
 			resolve: 'gatsby-source-filesystem',
 			options: {
@@ -42,10 +42,24 @@ module.exports = {
 		},
 
 		{
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/src/images`,
-      },
-    },
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				path: `${__dirname}/src/images`,
+			},
+		},
+
+		{
+			resolve: `gatsby-plugin-manifest`,
+			options: {
+				name: 'krebeDev',
+				short_name: 'krebeDev',
+				start_url: '/',
+				background_color: '#12141c',
+				theme_color: '#ffa621',
+				display: 'standalone',
+				icon: 'src/images/favicon.png',
+				crossOrigin: `use-credentials`,
+			},
+		},
 	],
 }
