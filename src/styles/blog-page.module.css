@@ -1,0 +1,52 @@
+@import url('./theme.css');
+
+.postList {
+  max-width: 50rem;
+  margin: 2rem 0;
+}
+
+
+.post {
+  margin: 1.5rem 0;
+  border-bottom: 1px solid #2b2c2c;
+  padding-bottom: 1rem;
+}
+
+.tags {
+	margin: 2rem 0;
+}
+
+.tag {
+	display: inline-block;
+	margin: 0.25rem 0.5rem 0.25rem 0;
+}
+
+.tagBtn {
+	color: var(--copy);
+	padding: 0.5rem;
+	font-size: 0.75rem;
+	font-weight: 700;
+	border: 1px solid var(--grey);
+	text-transform: uppercase;
+	background: none;
+	transition: .3s;
+}
+
+.activeBtn,
+.tagBtn:hover {
+	background: var(--copyLight);
+	color: var(--deepBlue);
+}
+
+.intro {
+  margin-top: 1rem;
+}
+
+.postTitle {
+  color: var(--lightYellow);
+}
+
+.moreLink {
+  font-weight: 700;
+}
+

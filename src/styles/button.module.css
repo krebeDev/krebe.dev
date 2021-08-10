@@ -1,0 +1,21 @@
+@import url('./global.css');
+
+.buttonStyles {
+  padding: 0.5rem 2rem;
+  border: 1px solid var(--yellow);
+  color: var(--yellow);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  background: none;
+}
+
+.buttonStyles:hover {
+  color: var(--deepBlue);
+  background: var(--yellow);
+}
+
+.buttonStyles:disabled {
+  opacity: 0.5;
+}

@@ -4,6 +4,12 @@ module.exports = {
 		author: {
 			name: 'Solomon Ekrebe',
 			jobTitle: 'Frontend Developer',
+			bio: "I'm passionate about clean UI/UX, accessiblity and scalabity. I write to learn.",
+			socialProfiles: {
+				twitter: 'https://twitter.com/krebedev',
+				linkedIn: 'https://linkedin.com/krebedev',
+				github: 'https://github.com/krebedev',
+			}
 		},
 		siteUrl: 'https://www.krebe.dev',
 		description:
@@ -17,12 +23,29 @@ module.exports = {
 		'gatsby-transformer-sharp',
 		'gatsby-plugin-react-helmet',
 		'gatsby-plugin-mdx',
+		'gatsby-plugin-fontawesome-css',
+		
 		{
 			resolve: 'gatsby-source-filesystem',
 			options: {
 				name: `blog`,
-				path: `${__dirname}/blog`,
+				path: `${__dirname}/contents/blog`,
 			},
 		},
+
+		{
+			resolve: 'gatsby-source-filesystem',
+			options: {
+				name: `projects`,
+				path: `${__dirname}/contents/projects`,
+			},
+		},
+
+		{
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/images`,
+      },
+    },
 	],
 }
