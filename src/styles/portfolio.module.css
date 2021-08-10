@@ -1,13 +1,12 @@
 @import url('./theme.css');
 
-
 .githubLink {
 	font-weight: 700;
 }
 
 .tags {
 	margin: 2rem 0;
-} 
+}
 
 .tag {
 	display: inline-block;
@@ -22,7 +21,7 @@
 	border: 1px solid var(--grey);
 	text-transform: uppercase;
 	background: none;
-	transition: .3s;
+	transition: 0.3s;
 }
 
 .activeBtn,
@@ -41,19 +40,19 @@
 	background: var(--deepBlue);
 	width: 100%;
 	height: 100%;
-	
+	z-index: 3;
 }
 
 .filterStatus {
 	text-transform: uppercase;
 	white-space: nowrap;
-	animation: filtering 2s steps(50, end); 
+	animation: filtering 2s steps(50, end);
 	overflow: hidden;
 	width: 100%;
 }
 
-@keyframes filtering{ 
-	from { 
-			 width: 0; 
-			 } 
-	 }
+@keyframes filtering {
+	from {
+		width: 0;
+	}
+}
