@@ -5,11 +5,11 @@
 	background: var(--deepBlue);
 	position: sticky;
 	top: 0;
-	z-index: 10; 
+	z-index: 10;
 }
 
 .logoAnchor {
-	width: 150px;	
+	width: 150px;
 }
 
 .navMenu {
@@ -20,7 +20,7 @@
 	height: 100vh;
 	top: 0;
 	right: 0;
-	background: rgba(11,13,18,0.995);
+	background: rgba(11, 13, 18, 0.995);
 }
 
 .expand {
@@ -59,15 +59,15 @@
 	color: var(--white);
 }
 
-@media (min-width: 768px) {	
-.navBar {
-	padding: 1.5rem 0;
-}
+@media (min-width: 768px) {
+	.navBar {
+		padding: 1.5rem 0;
+	}
 	.logoAnchor {
-		width: 180px;	
+		width: 180px;
 	}
 	.expand {
 		width: 35rem;
 		padding: 5rem 7.5% 1rem 2rem;
-	}	
+	}
 }
