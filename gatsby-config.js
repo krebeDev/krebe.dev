@@ -25,19 +25,19 @@ module.exports = {
 		'gatsby-plugin-mdx',
 		'gatsby-plugin-fontawesome-css',
 
-		{
-			resolve: 'gatsby-source-filesystem',
-			options: {
-				name: `blog`,
-				path: `${__dirname}/contents/blog`,
-			},
-		},
+		// {
+		// 	resolve: 'gatsby-source-filesystem',
+		// 	options: {
+		// 		name: `blog`,
+		// 		path: `${__dirname}/contents/blog`,
+		// 	},
+		// },
 
 		{
 			resolve: 'gatsby-source-filesystem',
 			options: {
-				name: `projects`,
-				path: `${__dirname}/contents/projects`,
+				name: `contents`,
+				path: `${__dirname}/contents`,
 			},
 		},
 
