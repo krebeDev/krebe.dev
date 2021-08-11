@@ -2,11 +2,12 @@
 
 .hero {
 	padding: 0;
+	background: var(--veryLightBlue);
 }
 
 .heroInner {
-	min-height: calc(100vh - 65px); /* change to dynamic values */
-	padding: 2rem 1rem;
+	min-height: calc(100vh - 68px); /* change to dynamic values */
+	padding: 0.5rem 1rem 3rem 1rem;
 }
 
 .heroHeading {
@@ -15,11 +16,11 @@
 }
 
 .highlight {
-	color: var(--lightYellow);
+	color: var(--deepOrange);
 }
 
 .heroCopy {
-	font-size: 1.1rem;
+	font-size: 1.3rem;
 	order: 2;
 	text-align: center;
 }
@@ -28,7 +29,7 @@
 	margin-top: 2rem;
 }
 
-.heroImage {
+.avatarBox {
 	max-width: 350px;
 	margin: 0.5rem auto;
 	order: 1;
@@ -36,21 +37,23 @@
 	padding: 2rem;
 }
 
-.heroImage::after {
+.avatarBox::after {
 	content: '';
-	width: 100%;
+	width: 90%;
 	height: 5rem;
 	background-image: url('../images/dots.png');
 	position: absolute;
-	right: 0;
-	bottom: 0;
-	z-index: -1;
+	right: 1rem;
+	bottom: 1rem;
+}
+.avatar {
+	position: relative;
+	z-index: 2;
 }
 
 @media (min-width: 768px) {
 	.heroCopy {
 		flex-basis: 40%;
-		font-size: 1.2rem;
 		order: 1;
 		text-align: left;
 	}
@@ -60,12 +63,12 @@
 		white-space: nowrap;
 	}
 
-	.heroImage {
+	.avatarBox {
 		order: 2;
 		padding: 0;
 	}
 
-	.heroImage::after {
+	.avatarBox::after {
 		height: 100%;
 		right: -3rem;
 		bottom: -3rem;

@@ -31,13 +31,14 @@ const HomePage = ({ data }) => {
 						</div>
 					</article>
 
-					<div className={styles.heroImage}>
+					<div className={styles.avatarBox}>
 						<StaticImage
 							src='./../images/me.jpg'
 							alt='krebeDev - Solomon Ekrebe'
 							placeholder='tracedSVG'
 							width={350}
 							height={350}
+							className={styles.avatar}
 						/>
 					</div>
 				</div>

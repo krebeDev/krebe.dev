@@ -6,7 +6,8 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
 import Layout from '../../components/layout'
-import * as styles from './../../styles/project-template.module.css'
+import * as styles from '../../styles/project-template.module.css'
+import { buttonStyles } from '../../styles/button.module.css'
 
 const Project = ({ data }) => {
 	const { title, overview, liveUrl, gitRepo, featuredImage } =
@@ -24,28 +25,32 @@ const Project = ({ data }) => {
 							<p>{overview}</p>
 							<div className={styles.projectLinks}>
 								{liveUrl && (
-									<a
-										href={liveUrl}
-										target='_blank'
-										rel='noopenner noreferrer'
-										className={styles.projectLink}>
-										<span className={styles.linkIcon}>
-											<FontAwesomeIcon icon={faExternalLinkAlt} />
-										</span>
-										Live Site
-									</a>
+									<div className={styles.linkBox}>
+										<a
+											href={liveUrl}
+											target='_blank'
+											rel='noopenner noreferrer'
+											className={buttonStyles}>
+											<span className={styles.linkIcon}>
+												<FontAwesomeIcon icon={faExternalLinkAlt} />
+											</span>
+											Live Site
+										</a>
+									</div>
 								)}
 								{gitRepo && (
-									<a
-										href={gitRepo}
-										target='_blank'
-										rel='noopenner noreferrer'
-										className={styles.projectLink}>
-										<span className={styles.linkIcon}>
-											<FontAwesomeIcon icon={faExternalLinkAlt} />
-										</span>
-										Source Code
-									</a>
+									<div className={styles.linkBox}>
+										<a
+											href={gitRepo}
+											target='_blank'
+											rel='noopenner noreferrer'
+											className={buttonStyles}>
+											<span className={styles.linkIcon}>
+												<FontAwesomeIcon icon={faExternalLinkAlt} />
+											</span>
+											Source Code
+										</a>
+									</div>
 								)}
 							</div>
 						</div>
