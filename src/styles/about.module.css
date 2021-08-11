@@ -8,15 +8,8 @@
 	margin-bottom: 1rem;
 }
 
-.about .details a {
-	text-decoration: underline;
-}
-
-.stars {
-	display: block;
-	margin-bottom: 3rem;
-	font-size: 1.2rem;
-	text-align: center;
+.details a {
+	font-weight: 700;
 }
 
 .downloadLink {
@@ -25,8 +18,6 @@
 	font-size: 0.9rem;
 	letter-spacing: 1.5px;
 	display: inline-block;
-	padding-bottom: 0.1rem;
-	border-bottom: 1px solid var(--grey);
 	margin-top: 2rem;
 }
 

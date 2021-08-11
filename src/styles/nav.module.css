@@ -1,8 +1,8 @@
 @import url('./theme.css');
 
 .navBar {
-	padding: 1.2rem 0;
-	background: var(--deepBlue);
+	padding: 1rem 0;
+	background: var(--darkBlue);
 	position: sticky;
 	top: 0;
 	z-index: 10;
@@ -20,7 +20,7 @@
 	height: 100vh;
 	top: 0;
 	right: 0;
-	background: rgba(11, 13, 18, 0.995);
+	background: var(--darkBlue);
 }
 
 .expand {
@@ -52,22 +52,20 @@
 .navLink {
 	padding: 0.2rem 0;
 	text-transform: uppercase;
-	font-weight: 700;
+	color: var(--lightBlue);
 }
 
+.navLink:hover,
 .activeLink {
-	color: var(--white);
+	color: var(--veryLightBlue);
 }
 
 @media (min-width: 768px) {
-	.navBar {
-		padding: 1.5rem 0;
-	}
 	.logoAnchor {
-		width: 180px;
+		width: 170px;
 	}
 	.expand {
-		width: 35rem;
+		width: 50%;
 		padding: 5rem 7.5% 1rem 2rem;
 	}
 }

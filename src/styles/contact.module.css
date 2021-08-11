@@ -1,86 +1,83 @@
 @import url('./theme.css');
 
 .contactInner {
-  max-width: 35rem;
+	max-width: 35rem;
 }
 
 .emailLink {
-  font-weight: 700;
+	font-weight: 700;
 }
 
 .socials {
-  margin-top: 4rem;
+	margin-top: 4rem;
 }
 
 .userEntries {
-  padding-top: 1.5rem;
+	padding-top: 1.5rem;
 }
 
 .editButton {
-  padding: 0.3rem 0.5rem;
-  background: #2d2d2d;
-  color: var(--copy);
-  border: none;
-  margin-right: 0.5rem;
+	padding: 0.5rem;
+	background: var(--lightBlue);
+	color: var(--grey);
+	border: none;
+	margin-right: 0.5rem;
 }
 
 .fieldValue {
-  margin-left: 0.5rem;
+	margin-left: 0.5rem;
 }
 
 .profileLinks {
-  display: flex;
-  padding: 1rem 0;
-  flex-wrap: wrap;
+	display: flex;
+	padding: 1rem 0;
+	flex-wrap: wrap;
 }
 
 .profile {
-  margin-right: 1rem;
+	margin-right: 1rem;
 }
 
 .profileLink {
-  padding: 0.1rem 1rem;
-  border: 1px solid;
-  display: flex;
-  align-items: center;
-  margin: 0.5rem 0;
+	padding: 0.4rem 1rem;
+	display: flex;
+	align-items: center;
+	margin: 0.5rem 0;
+	color: var(--veryLightGrey);
 }
 
 .networkName {
-  text-transform: uppercase;
-  font-size: 0.8rem;
-  margin-left: 0.5rem;
+	text-transform: uppercase;
+	font-size: 0.8rem;
+	margin-left: 0.5rem;
+}
+
+.github {
+	background: var(--githubGreen);
 }
 
 .github:hover {
-  background: var(--copy);
-  color:var(--deepBlue);
+	background: var(--green);
 }
 
 .linkedIn {
-  border-color: var(--linkedinBlue);
-  color: var(--linkedinBlue);
+	background: var(--linkedinBlue);
 }
-
-.linkedIn:hover {
-  background: var(--linkedinBlue);
-}
-
 
 .twitter {
-  color: var(--twitterBlue);
-  border-color: var(--twitterBlue);
+	background: var(--twitterBlue);
 }
 
-.twitter:hover {
-  background: var(--twitterBlue);
+.profileLink:hover {
+	color: var(--veryLightGrey);
+	opacity: 0.8;
 }
 
 .editIcon {
-   margin-top: 0.5rem;
+	margin-top: 0.5rem;
 }
 
 .messageGroup {
-  display: flex;
-  flex-wrap: wrap;
+	display: flex;
+	flex-wrap: wrap;
 }

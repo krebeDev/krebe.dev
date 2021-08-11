@@ -32,12 +32,6 @@ const About = ({ data }) => {
 					</a>
 				</div>
 			</section>
-			<small
-				className={styles.stars}
-				role='presentation'
-				aria-label='section break'>
-				* * * * * * * * * * * * * * * *{' '}
-			</small>
 			<Cta />
 		</Layout>
 	)
@@ -56,7 +50,7 @@ export const query = graphql`
 				title
 			}
 		}
-		mdx(id: { eq: "92984de4-cac9-52b9-9074-4992abe47f8b" }) {
+		mdx(id: { eq: "fdeb9712-c4dd-58a6-b127-80982a445f7e" }) {
 			frontmatter {
 				title
 			}

@@ -1,42 +1,32 @@
 @import url('./theme.css');
 
 .inner {
-  max-width: 800px;
+	max-width: 800px;
 }
 
 .projectLinks {
-  margin: 1rem 0;
-  display: flex;
-  flex-wrap: wrap;
+	margin: 1rem 0;
+	display: flex;
+	flex-wrap: wrap;
 }
 
-.projectLink {
-  border: 1px solid var(--copy);
-  padding: 0.3rem 1rem;
-  text-transform: uppercase;
-  font-size: 0.9rem;
-  margin: 0.5rem 0.5rem 0.5rem 0;
-}
-
-.projectLink:hover {
-  color: var(--deepBlue);
-  background: var(--copyLight);
+.linkBox {
+	margin: 0.5rem;
 }
 
 .projectDetails h2 {
-  margin-top: 2rem;
+	margin-top: 2rem;
 }
 
-
 .projectDetails ul {
-  list-style-type: square;
-  padding: 0.5rem 0 0 2rem;
+	list-style-type: square;
+	padding: 0.5rem 0 0 2rem;
 }
 
 .projectDetails a {
-text-decoration: underline;
+	text-decoration: underline;
 }
 
 .linkIcon {
-  margin-right: 0.5rem;
-} 
+	margin-right: 0.5rem;
+}

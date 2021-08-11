@@ -1,38 +1,40 @@
 @import url('./theme.css');
 
-
 .blogCards {
-  margin: 2rem 0;
+	margin: 2rem 0;
 }
 
 .blogCard {
-  margin: 3% auto;
-  overflow: hidden;
-  background: var(--veryDeepBlue);
+	margin: 3% auto;
+	overflow: hidden;
+	background: var(--veryLightBlue);
 }
 
 .featuredImage {
-  transition: .3s;
+	transition: 0.3s;
 }
 
 .blogCard:hover .featuredImage {
-  transform: scale(1.05);
+	transform: scale(1.05);
 }
 
 .title {
-  font-size: 1.5rem;
-  line-height: 2;
+	font-size: 1.3rem;
+	margin-bottom: 1rem;
 }
 
 .copy {
-  padding: 1.5rem 1.5rem 4rem 1.5rem;
-  max-width: 600px;
-  
+	padding: 1.5rem 1.5rem 4rem 1.5rem;
+	max-width: 600px;
 }
 
 @media (min-width: 768px) {
-  .blogCard {
-    flex-basis: 31%; 
-    margin: 0;
-  }
+	.blogCards {
+		align-items: stretch;
+	}
+
+	.blogCard {
+		flex-basis: 31%;
+		margin: 0;
+	}
 }

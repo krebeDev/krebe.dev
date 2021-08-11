@@ -12,8 +12,7 @@
 .projectSummary {
 	position: absolute;
 	top: 0;
-	color: var(--deepBlue);
-	background: var(--lightYellow);
+	background: var(--darkBlue);
 	z-index: 1;
 	height: 0.01px;
 	width: 100%;
@@ -25,21 +24,21 @@
 .projectCard:hover .projectSummary {
 	height: 100%;
 	padding: 1rem;
+	color: var(--darkBlue);
 }
 
 .projectName {
-	color: var(--deepBlue);
 	text-transform: uppercase;
 	font-size: 0.7rem;
-	padding: 0.2rem 0.5rem 0.2rem 4rem;
+	padding: 0.4rem 0.5rem 0.4rem 4rem;
 	position: relative;
 	z-index: 2;
-	background: var(--copyLight);
-	letter-spacing: 1px;
+	background: var(--veryLightBlue);
 }
 
 .projectCard:hover .projectName {
-	background: var(--lightYellow);
+	color: var(--veryLightBlue);
+	background: var(--darkBlue);
 }
 
 /* .circle {
@@ -58,7 +57,7 @@
 	border-radius: 50%;
 	position: absolute;
 	z-index: 2;
-	top: 0.3rem;
+	top: 0.5rem;
 	left: 0.5rem;
 	background: var(--lightRed);
 }
@@ -72,7 +71,7 @@
 	position: absolute;
 	z-index: 2;
 	left: 1rem;
-	background: var(--yellow);
+	background: var(--orange);
 }
 
 .barIcon::before {
@@ -97,13 +96,14 @@
 	margin: 0.5rem;
 	padding: 0.2rem 0.4rem;
 	text-transform: uppercase;
-	box-shadow: 0 -1px 2px;
+	background: var(--lightBlue);
 }
 
 .more {
 	text-decoration: underline;
 	font-weight: 700;
 	font-size: 0.8rem;
+	color: var(--lightBlue);
 }
 
 @media (min-width: 768px) {
