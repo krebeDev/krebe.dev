@@ -5,14 +5,16 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
-import Layout from '../../components/Layout'
-import * as styles from '../../styles/project-template.module.css'
-import { buttonStyles } from '../../styles/button.module.css'
+import Layout from '../components/Layout'
+import Recommends from './../components/Recommends'
+import * as styles from '../styles/project-template.module.css'
+import { buttonStyles } from '../styles/button.module.css'
 
-const Project = ({ data }) => {
+const Project = ({ data, pageContext }) => {
 	const { title, overview, liveUrl, gitRepo, featuredImage } =
 		data.mdx.frontmatter
 	const image = getImage(featuredImage)
+	const { next, previous } = pageContext
 
 	return (
 		<Layout>
@@ -60,6 +62,7 @@ const Project = ({ data }) => {
 						<article className={styles.projectDetails}>
 							<MDXRenderer>{data.mdx.body}</MDXRenderer>
 						</article>
+						<Recommends {...{ next, previous }} />
 					</div>
 				</div>
 			</section>

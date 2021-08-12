@@ -57,7 +57,7 @@ const BlogPage = ({ data }) => {
 								<p className={styles.intro}>
 									{frontmatter.overview}{' '}
 									<Link
-										to={`/blog/${slug}`}
+										to={`/${slug}`}
 										state={{ name: 'Solomon' }}
 										className={styles.moreLink}>
 										Continue reading...

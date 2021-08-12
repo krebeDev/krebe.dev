@@ -69,7 +69,7 @@ const NavBar = (props) => {
 								{pathname === slug ? (
 									<FontAwesomeIcon icon={faSquareFull} size='xs' />
 								) : (
-									<FontAwesomeIcon icon={faLongArrowAltRight} size='sm' />
+									<FontAwesomeIcon icon={faLongArrowAltRight} size='lg' />
 								)}
 							</Link>
 						</li>

@@ -1,48 +1,60 @@
 ---
-type: case
+type: project
 title: KindleNG - Web
 tags: ['NextJs', 'MongoDB', 'GraphQL', 'Styled JSX']
 liveUrl: https://kindle.ng/
-featuredImage: "../../src/images/kindleng-web.png"
+featuredImage: '../../src/images/kindleng-web.png'
 overview: A utility bill payment web application.
 featuredProject: 1
 date: 2021-04-01
 ---
 
 ## Project overview
+
 KindleNG is a commercial project I started in the middle of the pandemic in 2020.
-The app lets users pay electricity bills, do mobile top-up and subscribe to their cable TV — fast and securely. I built it with NextJs and MongoDB. 
+The app lets users pay electricity bills, do mobile top-up and subscribe to their cable TV — fast and securely. I built it with NextJs and MongoDB.
 
 ## Motivation
+
 I wanted to create a real-world application from the ground up without using a tool like WordPress.
 
 ## The challenge
+
 At the time, this was my biggest project to date. There were obvious challenges of course. The more striking ones were managing databases and web servers and fitting them all together. These prompted my adoption of Next.Js as the framework of choice.
 
 ## Creating the web app
+
 I built the frontend of the first version in about two months. But the UI didn't quite cut it.
 So I outsourced the UI design to a professional designer. It took about eight weeks for the mockups to get ready.
-Upon implementing the new UI/UX, it was time for the backend flow. 
+Upon implementing the new UI/UX, it was time for the backend flow.
 
 <br />
-The biggest mistake I made was building the frontend first. The application depended largely on external APIs. 
-I'd made several wrong assumptions about the shape of these data.  With this realization, I've had to rewrite the data entry points on the frontend.
+The biggest mistake I made was building the frontend first. The application depended
+largely on external APIs. I'd made several wrong assumptions about the shape of these
+data. With this realization, I've had to rewrite the data entry points on the frontend.
 
 <br />
-Building the backend was more fun than I had expected. I employed the Next.Js API routes feature to create API endpoints that powered the business logic and through which I connected to a MongoDB database where the app data lives.
+Building the backend was more fun than I had expected. I employed the Next.Js API
+routes feature to create API endpoints that powered the business logic and through
+which I connected to a MongoDB database where the app data lives.
 
 ## User data collection
+
 The app relied heavily on forms to collect user inputs. For this, I used Formik alongside Yup for input validation.
 
 ## Performance
+
 The Lighthouse scores are great. However, there's an impending issue with data fetching. The app currently makes three RESTful API calls to fetch user data upon authentication. This results in high latency on slow networks. I'm implementing GraphQL with Appollo-client to make a single request to improve the overall performance.
 
 ## Lessons learned
+
 All of these accorded me practical learning experience - from database design to API design principles, form
 validation, website security, and a whole lot of other stuff. The end-product is a full-stack application, all thanks to Next.Js and MongoDB.
 
 ## Technical summary
+
 I avoid the use of dependencies where possible. Here's a summary of the tools and packages I used while building this project.
+
 - Next.Js
 - Mongoose
 - NextAuth.Js

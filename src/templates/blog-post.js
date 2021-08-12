@@ -1,14 +1,16 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
-import Layout from '../../components/layout'
+import Layout from '../components/layout'
 import { Helmet } from 'react-helmet'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
-import OptinForm from '../../components/OptinForm'
-import AuthorCard from '../../components/AuthorCard'
-import * as styles from '../../styles/blog-post-template.module.css'
+import OptinForm from '../components/OptinForm'
+import AuthorCard from '../components/AuthorCard'
+import Recommends from '../components/Recommends'
+import * as styles from '../styles/blog-post-template.module.css'
 
-const BlogPost = ({ data }) => {
+const BlogPost = ({ data, pageContext }) => {
 	const { date, tags, title, author } = data.mdx.frontmatter
+	const { next, previous } = pageContext
 
 	return (
 		<Layout>
@@ -40,6 +42,7 @@ const BlogPost = ({ data }) => {
 					</article>
 					<AuthorCard author={data.site.siteMetadata.author} />
 					<OptinForm />
+					<Recommends {...{ next, previous }} />
 				</div>
 			</section>
 		</Layout>

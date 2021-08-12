@@ -105,7 +105,7 @@ export const query = graphql`
 			}
 		}
 		allMdx(
-			filter: { frontmatter: { type: { eq: "case" } } }
+			filter: { frontmatter: { type: { eq: "project" } } }
 			sort: { fields: frontmatter___date, order: DESC }
 		) {
 			nodes {

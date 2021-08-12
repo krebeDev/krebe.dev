@@ -29,6 +29,10 @@
 	margin-top: 2rem;
 }
 
+.sectionTitle {
+	margin-bottom: 0.5rem;
+}
+
 .avatarBox {
 	max-width: 350px;
 	margin: 0.5rem auto;
