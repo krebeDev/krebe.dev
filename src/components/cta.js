@@ -1,6 +1,6 @@
 import React from 'react'
-import * as styles from '../styles/cta.module.css'
 import { Link } from 'gatsby'
+import * as styles from '../styles/cta.module.css'
 
 const Cta = (props) => {
 	return (

@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'gatsby'
 import { useLocation } from '@reach/router'
-import * as styles from './../styles/nav.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
 	faLongArrowAltRight,
@@ -10,6 +9,7 @@ import {
 import Logo from './Logo'
 import HamburgerIcon from './Hamburger'
 import CloseIcon from './CloseIcon'
+import * as styles from '../styles/nav.module.css'
 
 const NavBar = (props) => {
 	const [isOpen, setIsOpen] = useState(false)

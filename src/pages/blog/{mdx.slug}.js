@@ -3,9 +3,9 @@ import { graphql, Link } from 'gatsby'
 import Layout from '../../components/layout'
 import { Helmet } from 'react-helmet'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
-import * as styles from '../../styles/blog-post-template.module.css'
 import OptinForm from '../../components/OptinForm'
-import AuthorCard from './../../components/AuthorCards'
+import AuthorCard from '../../components/AuthorCard'
+import * as styles from '../../styles/blog-post-template.module.css'
 
 const BlogPost = ({ data }) => {
 	const { date, tags, title, author } = data.mdx.frontmatter

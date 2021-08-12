@@ -13,10 +13,10 @@ import {
 	faLinkedinIn,
 } from '@fortawesome/free-brands-svg-icons'
 import Layout from '../components/Layout'
-import * as styles from '../styles/contact.module.css'
-import * as formStyles from '../styles/form-controls.module.css'
 import StepForm from '../components/StepForm'
 import { validateField, toTitleCase } from '../utils'
+import * as styles from '../styles/contact.module.css'
+import * as formStyles from '../styles/form-controls.module.css'
 
 const Contact = ({ data }) => {
 	const [formData, setFormData] = useState({
