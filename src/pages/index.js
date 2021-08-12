@@ -53,7 +53,7 @@ const HomePage = ({ data }) => {
 			</section>
 			<section>
 				<div className={`container`}>
-					<h2>I started writing for the web of recent</h2>
+					<h2>I started writing on the web of recent</h2>
 					<p>Checkout my latest posts.</p>
 					<BlogCards />
 					<Button pathname={'/blog'} title={'See all Posts'} />
