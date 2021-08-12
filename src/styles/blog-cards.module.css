@@ -1,7 +1,7 @@
 @import url('./theme.css');
 
 .blogCards {
-	margin: 2rem 0;
+	margin: 1rem 0;
 }
 
 .blogCard {
@@ -19,7 +19,7 @@
 }
 
 .title {
-	font-size: 1.3rem;
+	font-size: 1.2rem;
 	margin-bottom: 1rem;
 }
 
@@ -29,6 +29,10 @@
 }
 
 @media (min-width: 768px) {
+	.blogCards {
+		margin: 2rem 0;
+	}
+
 	.blogCards {
 		align-items: stretch;
 	}
