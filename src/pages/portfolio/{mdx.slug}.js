@@ -5,7 +5,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
-import Layout from '../../components/layout'
+import Layout from '../../components/Layout'
 import * as styles from '../../styles/project-template.module.css'
 import { buttonStyles } from '../../styles/button.module.css'
 

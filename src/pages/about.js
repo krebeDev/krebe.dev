@@ -3,10 +3,10 @@ import { graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDownload } from '@fortawesome/free-solid-svg-icons'
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
 import * as styles from './../styles/about.module.css'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
-import Cta from './../components/cta'
+import Cta from './../components/Cta'
 
 const About = ({ data }) => {
 	const { siteMetadata } = data.site

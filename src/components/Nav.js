@@ -2,14 +2,14 @@ import React, { useState } from 'react'
 import { Link } from 'gatsby'
 import { useLocation } from '@reach/router'
 import * as styles from './../styles/nav.module.css'
-import Logo from './logo'
-import HamburgerIcon from './hamburger'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
 	faLongArrowAltRight,
 	faSquareFull,
 } from '@fortawesome/free-solid-svg-icons'
-import CloseIcon from './close-icon'
+import Logo from './Logo'
+import HamburgerIcon from './Hamburger'
+import CloseIcon from './CloseIcon'
 
 const NavBar = (props) => {
 	const [isOpen, setIsOpen] = useState(false)

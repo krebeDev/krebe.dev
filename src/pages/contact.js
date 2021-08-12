@@ -15,7 +15,7 @@ import {
 import Layout from '../components/Layout'
 import * as styles from '../styles/contact.module.css'
 import * as formStyles from '../styles/form-controls.module.css'
-import StepForm from '../components/step-form'
+import StepForm from '../components/StepForm'
 import { validateField, toTitleCase } from '../utils'
 
 const Contact = ({ data }) => {

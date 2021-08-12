@@ -3,8 +3,8 @@ import { graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
 import Layout from '../../components/layout'
 import * as styles from '../../styles/portfolio.module.css'
-import ProjectCards from './../../components/project-cards'
-import Cta from '../../components/cta'
+import ProjectCards from './../../components/ProjectCards'
+import Cta from '../../components/Cta'
 
 const Projects = ({ data }) => {
 	const ALL_PROJECTS = 'All Projects'
