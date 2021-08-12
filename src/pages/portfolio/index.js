@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
-import Layout from '../../components/layout'
+import Layout from '../../components/Layout'
 import ProjectCards from '../../components/ProjectCards'
 import Cta from '../../components/Cta'
 import * as styles from '../../styles/portfolio.module.css'
