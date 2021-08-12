@@ -11,7 +11,7 @@
 }
 
 .linkBox {
-	margin: 0.5rem;
+	margin: 1rem 1rem 1rem 0;
 }
 
 .projectDetails h2 {
@@ -29,4 +29,10 @@
 
 .linkIcon {
 	margin-right: 0.5rem;
+}
+
+@media (min-width: 768px) {
+	.linkBox {
+		margin-bottom: 2rem;
+	}
 }

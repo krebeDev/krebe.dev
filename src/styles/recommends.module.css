@@ -1,23 +1,41 @@
 @import url('./theme.css');
 
+.recommends {
+	margin: 2rem 0;
+	align-items: stretch;
+	flex-direction: column;
+}
+
 .recommendLink {
-  flex-basis: 49%;
-  padding: 1rem 1rem;
-  background: var(--veryDeepBlue);
-  border: none;
-  border: 1px solid var(--veryDeepBlue);
+	padding: 1rem;
+	background: var(--veryLightBlue);
+	border: 1px solid var(--veryLightBlue);
+	margin-bottom: 1rem;
 }
 
 .recommendLink:hover {
-  border-color: var(--grey);
+	border-color: var(--darkBlue);
+	color: var(--darkBlue);
 }
 
 .direction {
-  text-transform: uppercase;
-  font-size: 0.8rem;
+	text-transform: uppercase;
+	font-size: 0.7rem;
+	font-weight: 700;
 }
 
 .title {
-  color: var(--lightYellow);
-  display: block;
+	color: var(--darkBlue);
+	display: block;
+}
+
+@media (min-width: 768px) {
+	.recommends {
+		flex-direction: row;
+	}
+
+	.recommendLink {
+		flex-basis: 48%;
+		margin: auto 0;
+	}
 }

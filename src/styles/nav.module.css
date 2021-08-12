@@ -53,6 +53,8 @@
 	padding: 0.2rem 0;
 	text-transform: uppercase;
 	color: var(--lightBlue);
+	font-size: 0.9rem;
+	font-weight: 700;
 }
 
 .navLink:hover,
