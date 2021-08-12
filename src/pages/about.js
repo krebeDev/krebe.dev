@@ -50,7 +50,7 @@ export const query = graphql`
 				title
 			}
 		}
-		mdx(id: { eq: "96fd4a49-d583-561d-b82f-87b4409f1f7c" }) {
+		mdx(slug: { eq: "about/about" }) {
 			frontmatter {
 				title
 			}
