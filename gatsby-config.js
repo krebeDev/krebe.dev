@@ -4,7 +4,7 @@ module.exports = {
 		author: {
 			name: 'Solomon Ekrebe',
 			jobTitle: 'Frontend Developer',
-			bio: "I'm passionate about clean UI/UX, accessiblity and scalabity. I write to learn.",
+			bio: "I'm passionate about clean UI/UX, accessiblity and scalable apps.",
 			socialProfiles: {
 				twitter: 'https://twitter.com/krebedev',
 				linkedIn: 'https://linkedin.com/krebedev',
@@ -15,7 +15,7 @@ module.exports = {
 		description:
 			'Frontend Developer based in Abuja, Nigeria. This is my portfolio website.',
 		twitterUserName: '@krebeDev',
-		image: './src/images/me.jpg', // change
+		image: './src/images/krebeDev.png',
 	},
 	plugins: [
 		'gatsby-plugin-image',
@@ -24,14 +24,6 @@ module.exports = {
 		'gatsby-plugin-react-helmet',
 		'gatsby-plugin-mdx',
 		'gatsby-plugin-fontawesome-css',
-
-		// {
-		// 	resolve: 'gatsby-source-filesystem',
-		// 	options: {
-		// 		name: `blog`,
-		// 		path: `${__dirname}/contents/blog`,
-		// 	},
-		// },
 
 		{
 			resolve: 'gatsby-source-filesystem',
@@ -54,8 +46,8 @@ module.exports = {
 				name: 'krebeDev',
 				short_name: 'krebeDev',
 				start_url: '/',
-				background_color: '#12141c',
-				theme_color: '#ffa621',
+				background_color: '#103e7e',
+				theme_color: '#f99f20',
 				display: 'standalone',
 				icon: 'src/images/favicon.png',
 				crossOrigin: `use-credentials`,
