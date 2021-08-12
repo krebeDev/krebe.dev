@@ -4,8 +4,8 @@ import Layout from '../../components/layout'
 import { Helmet } from 'react-helmet'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import * as styles from '../../styles/blog-post-template.module.css'
-import OptinForm from '../../components/optin-form'
-import AuthorCard from '../../components/author-card'
+import OptinForm from '../../components/OptinForm'
+import AuthorCard from './../../components/AuthorCards'
 
 const BlogPost = ({ data }) => {
 	const { date, tags, title, author } = data.mdx.frontmatter

@@ -1,7 +1,7 @@
 import React from 'react'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import * as styles from '../styles/project-cards.module.css'
 import { Link } from 'gatsby'
+import * as styles from '../styles/project-cards.module.css'
 
 const ProjectCards = ({ projects }) => {
 	return (

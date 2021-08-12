@@ -1,13 +1,13 @@
 import * as React from 'react'
 import { Helmet } from 'react-helmet'
 import { graphql } from 'gatsby'
+import { StaticImage } from 'gatsby-plugin-image'
 import Layout from '../components/layout'
 import * as styles from './../styles/index.module.css'
-import Button from './../components/button'
-import { StaticImage } from 'gatsby-plugin-image'
-import ProjectCards from '../components/project-cards'
-import BlogCards from '../components/blog-cards'
-import Cta from '../components/cta'
+import Button from './../components/Button'
+import ProjectCards from '../components/ProjectCards'
+import BlogCards from '../components/BlogCards'
+import Cta from '../components/Cta'
 
 const HomePage = ({ data }) => {
 	const { name, jobTitle } = data.site.siteMetadata.author
