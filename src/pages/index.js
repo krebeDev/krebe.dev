@@ -45,7 +45,9 @@ const HomePage = ({ data }) => {
 			</section>
 			<section>
 				<div className={`container`}>
-					<h2>Here's a set of my recent projects</h2>
+					<h2 className={styles.sectionTitle}>
+						Here's a set of my recent projects
+					</h2>
 					<p>With some tools and tech stacks I have dabbled with.</p>
 					<ProjectCards projects={data.allMdx.nodes} />
 					<Button pathname={'/portfolio'} title={'View all Projects'} />
@@ -53,7 +55,9 @@ const HomePage = ({ data }) => {
 			</section>
 			<section>
 				<div className={`container`}>
-					<h2>I started writing on the web of recent</h2>
+					<h2 className={styles.sectionTitle}>
+						I started writing on the web of recent
+					</h2>
 					<p>Checkout my latest posts.</p>
 					<BlogCards />
 					<Button pathname={'/blog'} title={'See all Posts'} />
