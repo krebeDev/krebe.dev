@@ -9,7 +9,7 @@
 }
 
 .logoAnchor {
-	width: 150px;
+	width: 140px;
 }
 
 .navMenu {
@@ -62,7 +62,7 @@
 
 @media (min-width: 768px) {
 	.logoAnchor {
-		width: 170px;
+		width: 150px;
 	}
 	.expand {
 		width: 50%;
