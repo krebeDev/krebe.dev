@@ -23,6 +23,7 @@ const Seo = () => {
 
 	return (
 		<Helmet>
+			<html lang='en' />
 			<meta name='description' content={description} />
 			<meta name='image' content={image} />
 			<meta property='og:url' content={`${siteUrl}${pathname}`} />
