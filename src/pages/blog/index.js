@@ -47,9 +47,9 @@ const BlogPage = ({ data }) => {
 					<ul className={`${styles.postList}`}>
 						{blogs.map(({ id, slug, timeToRead, frontmatter }) => (
 							<li key={id} className={styles.post}>
-								<Link to={slug}></Link>
+								<Link to={`/${slug}`}></Link>
 								<h2>
-									<Link to={slug}>{frontmatter.title}</Link>
+									<Link to={`/${slug}`}>{frontmatter.title}</Link>
 								</h2>
 								<small>
 									{frontmatter.date}. {timeToRead} min read

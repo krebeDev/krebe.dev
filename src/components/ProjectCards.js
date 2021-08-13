@@ -8,10 +8,10 @@ const ProjectCards = ({ projects }) => {
 		<ul className={`flex-centered ${styles.projectList}`}>
 			{projects.map(({ frontmatter, id, slug }) => (
 				<li key={id} className={styles.projectCard}>
-					<Link to={`/portfolio/${slug}`}>
+					<Link to={`/${slug}`}>
 						<div>
 							<h2 className={styles.projectName}>{frontmatter.title}</h2>
-							<i role='presentation' className={styles.barIcon}></i>
+							<span role='presentation' className={styles.barIcon}></span>
 							<div className={styles.projectSummary}>
 								<ul className={styles.tagList}>
 									{frontmatter.tags.map((tag) => (
