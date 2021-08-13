@@ -2,10 +2,9 @@
 
 .buttonStyles {
 	padding: 0.6rem 1rem;
-	font-size: 0.8rem;
+	font-size: 0.9rem;
 	text-transform: uppercase;
 	letter-spacing: 1px;
-	font-weight: 700;
 	color: var(--darkBlue);
 	background: var(--orange);
 	border: none;
@@ -22,6 +21,6 @@
 
 @media (min-width: 768px) {
 	.buttonStyles {
-		padding: 0.8rem 1.5rem;
+		padding: 0.7rem 1.5rem;
 	}
 }
