@@ -2,14 +2,14 @@
 
 .navBar {
 	padding: 1rem 0;
-	background: var(--darkBlue);
+	background: var(--veryLightBlue);
 	position: sticky;
 	top: 0;
 	z-index: 10;
 }
 
 .logoAnchor {
-	width: 140px;
+	width: 120px;
 }
 
 .navMenu {
@@ -33,16 +33,22 @@
 	border: none;
 	position: relative;
 	z-index: 999;
-	width: 2rem;
+}
+
+.toggleButton span {
+	display: inline-block;
+}
+
+.hamburgerIconBox {
+	width: 1.5rem;
+}
+
+.closeIconBox {
+	width: 1.2rem;
 }
 
 .toggleButton:focus {
 	outline: none;
-}
-
-.closeIcon {
-	width: 1.5rem;
-	display: inline-block;
 }
 
 .navItem {
@@ -63,6 +69,13 @@
 }
 
 @media (min-width: 768px) {
+	.hamburgerIconBox {
+		width: 2rem;
+	}
+
+	.closeIconBox {
+		width: 1.5rem;
+	}
 	.logoAnchor {
 		width: 150px;
 	}

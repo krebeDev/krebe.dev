@@ -29,7 +29,7 @@ const createPages = async ({ actions, graphql }) => {
 		const previous = i === 0 ? null : projects[i - 1]
 
 		createPage({
-			path: `portfolio/${project.node.slug}`,
+			path: project.node.slug,
 			component: require.resolve('./src/templates/project.js'),
 			context: {
 				id,
@@ -50,7 +50,7 @@ const createPages = async ({ actions, graphql }) => {
 		const previous = i === 0 ? null : posts[i - 1]
 
 		createPage({
-			path: `blog/${post.node.slug}`,
+			path: post.node.slug,
 			component: require.resolve('./src/templates/blog-post.js'),
 			context: {
 				id,

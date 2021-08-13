@@ -34,7 +34,7 @@ const BlogCards = (props) => {
 			{query.allMdx.nodes.map(({ frontmatter, id, slug }) => (
 				<li key={id} className={styles.blogCard}>
 					<article>
-						<Link to={`/blog/${slug}`}>
+						<Link to={slug}>
 							<GatsbyImage
 								image={getImage(frontmatter.featuredImage)}
 								alt={frontmatter.title}
@@ -43,7 +43,7 @@ const BlogCards = (props) => {
 						</Link>
 						<div className={styles.copy}>
 							<h2 className={styles.title}>
-								<Link to={`/blog/${slug}`}>{frontmatter.title}</Link>
+								<Link to={slug}>{frontmatter.title}</Link>
 							</h2>
 							<p>{frontmatter.overview}</p>
 						</div>

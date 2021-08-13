@@ -41,17 +41,25 @@ const NavBar = (props) => {
 	return (
 		<header className={styles.navBar}>
 			<nav className={`container flex-centered`}>
-				<Link to='/' className={styles.logoAnchor}>
+				<Link
+					to='/'
+					title='Back to home'
+					aria-label='krebeDev logo'
+					className={styles.logoAnchor}>
 					<Logo />
 				</Link>
 
-				<button className={styles.toggleButton} onClick={toggleMenu}>
+				<button
+					className={styles.toggleButton}
+					onClick={toggleMenu}
+					title='Menu'
+					aria-label='toggle button'>
 					{isOpen ? (
-						<span className={styles.closeIcon}>
+						<span className={styles.closeIconBox}>
 							<CloseIcon />
 						</span>
 					) : (
-						<span>
+						<span className={styles.hamburgerIconBox}>
 							<HamburgerIcon />
 						</span>
 					)}
@@ -66,11 +74,13 @@ const NavBar = (props) => {
 								className={`${styles.navLink} flex-centered`}
 								activeClassName={styles.activeLink}>
 								{title}
-								{pathname === slug ? (
-									<FontAwesomeIcon icon={faSquareFull} size='xs' />
-								) : (
-									<FontAwesomeIcon icon={faLongArrowAltRight} size='lg' />
-								)}
+								<span role='presentation'>
+									{pathname === slug ? (
+										<FontAwesomeIcon icon={faSquareFull} size='xs' />
+									) : (
+										<FontAwesomeIcon icon={faLongArrowAltRight} size='lg' />
+									)}
+								</span>
 							</Link>
 						</li>
 					))}

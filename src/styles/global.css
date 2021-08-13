@@ -38,7 +38,7 @@ a {
 }
 
 a:hover {
-	color: var(--deepOrange);
+	color: var(--baseBlue);
 }
 
 h1,

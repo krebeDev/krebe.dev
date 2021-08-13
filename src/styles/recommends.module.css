@@ -14,8 +14,8 @@
 }
 
 .recommendLink:hover {
-	border-color: var(--darkBlue);
-	color: var(--darkBlue);
+	border-color: var(--baseBlue);
+	color: var(--baseBlue);
 }
 
 .direction {
