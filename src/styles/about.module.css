@@ -11,16 +11,3 @@
 .details a {
 	font-weight: 700;
 }
-
-.downloadLink {
-	text-transform: uppercase;
-	font-weight: 700;
-	font-size: 0.9rem;
-	letter-spacing: 1.5px;
-	display: inline-block;
-	margin-top: 2rem;
-}
-
-.downloadIcon {
-	margin-right: 0.5rem;
-}

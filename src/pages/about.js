@@ -21,15 +21,6 @@ const About = ({ data }) => {
 							<MDXRenderer>{data.mdx.body}</MDXRenderer>
 						</div>
 					</article>
-					<a className={styles.downloadLink} href='#my-cv' download>
-						<span>
-							<FontAwesomeIcon
-								icon={faDownload}
-								className={styles.downloadIcon}
-							/>
-						</span>
-						Download CV
-					</a>
 				</div>
 			</section>
 			<Cta />
