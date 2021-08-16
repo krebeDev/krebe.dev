@@ -34,10 +34,10 @@ const HomePage = ({ data }) => {
 					<div className={styles.avatarBox}>
 						<StaticImage
 							src='./../images/me.jpg'
-							alt='krebeDev - Solomon Ekrebe'
+							alt='Solomon Ekrebe'
 							placeholder='tracedSVG'
-							width={350}
-							height={350}
+							width={497}
+							height={589}
 							className={styles.avatar}
 						/>
 					</div>
