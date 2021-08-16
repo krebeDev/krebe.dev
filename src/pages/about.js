@@ -1,8 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faDownload } from '@fortawesome/free-solid-svg-icons'
 import Layout from '../components/Layout'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Cta from '../components/Cta'
