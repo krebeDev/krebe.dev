@@ -71,8 +71,7 @@ const NavBar = (props) => {
 							<Link
 								onClick={() => setIsOpen(false)}
 								to={slug}
-								className={`${styles.navLink} flex-centered`}
-								activeClassName={styles.activeLink}>
+								className={`${styles.navLink} flex-centered`}>
 								{title}
 								<span role='presentation'>
 									{pathname === slug ? (
