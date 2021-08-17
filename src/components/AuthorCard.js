@@ -9,7 +9,7 @@ const AuthorCard = ({ author }) => {
 		<div className={`${styles.authorCard} flex-centered`}>
 			<div className={styles.avatarBox}>
 				<StaticImage
-					src={'../images/me.jpg'}
+					src={'../images/solomon-ekrebe.jpg'}
 					width={100}
 					height={100}
 					placeholder='blurred'
