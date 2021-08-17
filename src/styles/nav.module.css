@@ -20,7 +20,8 @@
 	height: 100vh;
 	top: 0;
 	right: 0;
-	background: var(--darkBlue);
+	background: var(--veryLightBlue);
+	box-shadow: 5px 5px 15px rgba(16, 62, 126, 0.5);
 }
 
 .expand {
@@ -58,14 +59,9 @@
 .navLink {
 	padding: 0.2rem 0;
 	text-transform: uppercase;
-	color: var(--lightBlue);
+	color: var(--darkBlue);
 	font-size: 0.9rem;
 	font-weight: 700;
-}
-
-.navLink:hover,
-.activeLink {
-	color: var(--veryLightBlue);
 }
 
 @media (min-width: 768px) {
