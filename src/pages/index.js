@@ -33,11 +33,11 @@ const HomePage = ({ data }) => {
 
 					<div className={styles.avatarBox}>
 						<StaticImage
-							src='./../images/solomon-ekrebe.jpg'
+							src='./../images/solomon-ekrebe.png'
 							alt='Solomon Ekrebe'
 							placeholder='dominantColor'
-							width={1360}
-							height={1360}
+							width={670}
+							height={670}
 							className={styles.avatar}
 							style={{ border: 'red', fontFamily: '' }}
 						/>
