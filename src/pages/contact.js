@@ -60,6 +60,7 @@ const Contact = ({ data }) => {
     if (!isValidField) return
 
     // make api call
+    setIsSubmitting(true)
     const payload = {
       from_name: formData.name,
       to_name: 'krebeDev',
@@ -84,6 +85,7 @@ const Contact = ({ data }) => {
       setSendStatus(() => error.status)
     } finally {
       setIsSubmitting(false)
+      setStep(0)
     }
   }
 
@@ -141,7 +143,9 @@ const Contact = ({ data }) => {
                 </button>
               )}
             </div>
-            <StepForm {...{ step, nextStepHandler, handleSubmit }}>
+            <StepForm
+              {...{ step, nextStepHandler, handleSubmit, isSubmitting }}
+            >
               <div className={formStyles.formGroup}>
                 <label htmlFor='name'>Name</label>
                 <FontAwesomeIcon icon={faUserAlt} />
