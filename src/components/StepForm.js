@@ -23,7 +23,7 @@ const StepForm = (props) => {
       )}
 
       {isLastStep && (
-        <button type='submit' className={buttonStyles}>
+        <button type='submit' className={buttonStyles} disabled={isSubmitting}>
           {isSubmitting ? 'Sending...' : 'Send Message'}
         </button>
       )}
