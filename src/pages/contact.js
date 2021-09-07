@@ -70,10 +70,10 @@ const Contact = ({ data }) => {
 
     try {
       const sendMessage = await send(
-        process.env.EMAILJS_SERVICE_ID,
-        process.env.EMAILJS_TEMPLATE_ID,
+        process.env.GATSBY_EMAILJS_SERVICE_ID,
+        process.env.GATSBY_EMAILJS_TEMPLATE_ID,
         payload,
-        process.env.EMAILJS_USER_ID
+        process.env.GATSBY_EMAILJS_USER_ID
       )
       setSendStatus(() => sendMessage.status)
       setFormData({
