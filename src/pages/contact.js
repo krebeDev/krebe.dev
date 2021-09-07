@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from 'react'
 import { graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
+import { send } from 'emailjs-com'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
-	faUserAlt,
-	faEnvelope,
-	faEdit,
+  faUserAlt,
+  faEnvelope,
+  faEdit,
 } from '@fortawesome/free-solid-svg-icons'
 import {
-	faGithub,
-	faTwitter,
-	faLinkedinIn,
+  faGithub,
+  faTwitter,
+  faLinkedinIn,
 } from '@fortawesome/free-brands-svg-icons'
 import Layout from '../components/Layout'
 import StepForm from '../components/StepForm'
@@ -19,182 +20,237 @@ import * as styles from '../styles/contact.module.css'
 import * as formStyles from '../styles/form-controls.module.css'
 
 const Contact = ({ data }) => {
-	const [formData, setFormData] = useState({
-		name: '',
-		email: '',
-		message: '',
-	})
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  })
 
-	const [step, setStep] = useState(0)
-	const [errorFlash, setErrorFlash] = useState(false)
-	const formFields = Object.keys(formData)
+  const [step, setStep] = useState(0)
+  const [errorFlash, setErrorFlash] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [sendStatus, setSendStatus] = useState('')
 
-	const handleChange = (event) => {
-		const { name, value } = event.target
-		const formDataClone = { ...formData }
-		formDataClone[name] = value
-		setFormData(formDataClone)
-	}
+  const formFields = Object.keys(formData)
 
-	const handleValidation = () => {
-		const field = formFields[step]
-		const value = formData[field]
-		const isValid = validateField(field, value)
-		setErrorFlash((currentState) => (!isValid ? true : currentState))
-		return isValid
-	}
+  const handleChange = (event) => {
+    const { name, value } = event.target
+    const formDataClone = { ...formData }
+    formDataClone[name] = value
+    setFormData(formDataClone)
+  }
 
-	const nextStepHandler = () => {
-		const isValidField = handleValidation()
-		if (!isValidField) return
-		setStep((currentStep) => currentStep + 1)
-	}
+  const handleValidation = () => {
+    const field = formFields[step]
+    const value = formData[field]
+    const isValid = validateField(field, value)
+    setErrorFlash((currentState) => (!isValid ? true : currentState))
+    return isValid
+  }
 
-	const handleSubmit = (event) => {
-		event.preventDefault()
-		const isValidField = handleValidation()
-		if (!isValidField) return
-		// make api call
-	}
+  const nextStepHandler = () => {
+    const isValidField = handleValidation()
+    if (!isValidField) return
+    setStep((currentStep) => currentStep + 1)
+  }
 
-	const socialIcons = {
-		twitter: <FontAwesomeIcon icon={faTwitter} />,
-		linkedIn: <FontAwesomeIcon icon={faLinkedinIn} />,
-		github: <FontAwesomeIcon icon={faGithub} />,
-	}
+  const handleSubmit = async (event) => {
+    event.preventDefault()
+    const isValidField = handleValidation()
+    if (!isValidField) return
 
-	useEffect(() => {
-		const timerId = setTimeout(() => {
-			setErrorFlash(false)
-		}, 1000)
+    // make api call
+    const payload = {
+      from_name: formData.name,
+      to_name: 'krebeDev',
+      message: formData.message,
+      reply_to: formData.email,
+    }
 
-		return () => clearTimeout(timerId)
-	}, [errorFlash])
+    try {
+      const sendMessage = await send(
+        process.env.EMAILJS_SERVICE_ID,
+        process.env.EMAILJS_TEMPLATE_ID,
+        payload,
+        process.env.EMAILJS_USER_ID
+      )
+      setSendStatus(() => sendMessage.status)
+      setFormData({
+        name: '',
+        email: '',
+        message: '',
+      })
+    } catch (error) {
+      setSendStatus(() => error.status)
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
 
-	const { siteMetadata } = data.site
+  const socialIcons = {
+    twitter: <FontAwesomeIcon icon={faTwitter} />,
+    linkedIn: <FontAwesomeIcon icon={faLinkedinIn} />,
+    github: <FontAwesomeIcon icon={faGithub} />,
+  }
 
-	return (
-		<Layout>
-			<Helmet title={`Contact | ${siteMetadata.title}`} />
-			<section>
-				<div className={`container`}>
-					<h1>Get in touch</h1>
-					<div className={`${styles.contactInner}`}>
-						<p>
-							If you have any queries for me or want to discuss an excellent
-							project or collaboration please{' '}
-							<a href='mailto:solomon@krebe.dev' className={styles.emailLink}>
-								send me an email
-							</a>{' '}
-							or drop a note in the form below.
-						</p>
+  useEffect(() => {
+    const timerId = setTimeout(() => {
+      setErrorFlash(false)
+    }, 1000)
 
-						<div className={styles.userEntries}>
-							{formData.name && step > 0 && (
-								<button
-									onClick={() => setStep(0)}
-									className={styles.editButton}>
-									<FontAwesomeIcon icon={faUserAlt} />
-									<span className={styles.fieldValue}>{formData.name}</span>
-								</button>
-							)}
-							{formData.email && step > 1 && (
-								<button
-									onClick={() => setStep(1)}
-									className={styles.editButton}>
-									<FontAwesomeIcon icon={faEnvelope} />
-									<span className={styles.fieldValue}>{formData.email}</span>
-								</button>
-							)}
-						</div>
-						<StepForm {...{ step, nextStepHandler, handleSubmit }}>
-							<div className={formStyles.formGroup}>
-								<label htmlFor='name'>Name</label>
-								<FontAwesomeIcon icon={faUserAlt} />
-								<input
-									onChange={handleChange}
-									value={formData.name}
-									type='text'
-									name='name'
-									id='name'
-									placeholder='Enter your name'
-									className={`${errorFlash && formStyles.errorHighlight}`}
-								/>
-							</div>
+    return () => clearTimeout(timerId)
+  }, [errorFlash])
 
-							<div className={formStyles.formGroup}>
-								<label htmlFor='email'>Email Address</label>
-								<FontAwesomeIcon icon={faEnvelope} />
-								<input
-									onChange={handleChange}
-									value={formData.email}
-									type='email'
-									placeholder='Enter your email address'
-									name='email'
-									id='email'
-									className={`${errorFlash && formStyles.errorHighlight}`}
-								/>
-							</div>
+  const { siteMetadata } = data.site
 
-							<div className={`${formStyles.formGroup} ${styles.messageGroup}`}>
-								<label htmlFor='message'>Message</label>
-								<FontAwesomeIcon icon={faEdit} className={styles.editIcon} />
-								<textarea
-									onChange={handleChange}
-									name='message'
-									id='message'
-									value={formData.message}
-									placeholder='Enter your message'
-									rows={5}
-									className={`${errorFlash && formStyles.errorHighlight}`}
-								/>
-							</div>
-						</StepForm>
+  return (
+    <Layout>
+      <Helmet title={`Contact | ${siteMetadata.title}`} />
+      <section>
+        <div className={`container`}>
+          <h1>Get in touch</h1>
+          <div className={`${styles.contactInner}`}>
+            <p>
+              If you have any queries for me or want to discuss an excellent
+              project or collaboration please{' '}
+              <a href='mailto:solomon@krebe.dev' className={styles.emailLink}>
+                send me an email
+              </a>{' '}
+              or drop a note in the form below.
+            </p>
 
-						<div className={styles.socials}>
-							<h2>Let's get social</h2>
-							<p>Connect with me on social media.</p>
-							<ul className={styles.profileLinks}>
-								{Object.entries(siteMetadata.author.socialProfiles).map(
-									([key, value]) => (
-										<li key={key} className={styles.profile}>
-											<a
-												href={value}
-												target='_blank'
-												rel='noopener noreferrer'
-												className={`${styles.profileLink} ${styles[key]}`}>
-												<span>{socialIcons[key]}</span>
-												<span className={styles.networkName}>
-													{toTitleCase(key)}
-												</span>
-											</a>
-										</li>
-									)
-								)}
-							</ul>
-						</div>
-					</div>
-				</div>
-			</section>
-		</Layout>
-	)
+            <div className={styles.userEntries}>
+              {formData.name && step > 0 && (
+                <button
+                  onClick={() => setStep(0)}
+                  className={styles.editButton}
+                  disabled={isSubmitting}
+                >
+                  <FontAwesomeIcon icon={faUserAlt} />
+                  <span className={styles.fieldValue}>{formData.name}</span>
+                </button>
+              )}
+              {formData.email && step > 1 && (
+                <button
+                  onClick={() => setStep(1)}
+                  className={styles.editButton}
+                  disabled={isSubmitting}
+                >
+                  <FontAwesomeIcon icon={faEnvelope} />
+                  <span className={styles.fieldValue}>{formData.email}</span>
+                </button>
+              )}
+            </div>
+            <StepForm {...{ step, nextStepHandler, handleSubmit }}>
+              <div className={formStyles.formGroup}>
+                <label htmlFor='name'>Name</label>
+                <FontAwesomeIcon icon={faUserAlt} />
+                <input
+                  onChange={handleChange}
+                  value={formData.name}
+                  type='text'
+                  name='name'
+                  id='name'
+                  placeholder='Enter your name'
+                  className={`${errorFlash && formStyles.errorHighlight}`}
+                  disabled={isSubmitting}
+                />
+              </div>
+
+              <div className={formStyles.formGroup}>
+                <label htmlFor='email'>Email Address</label>
+                <FontAwesomeIcon icon={faEnvelope} />
+                <input
+                  onChange={handleChange}
+                  value={formData.email}
+                  type='email'
+                  placeholder='Enter your email address'
+                  name='email'
+                  id='email'
+                  className={`${errorFlash && formStyles.errorHighlight}`}
+                  disabled={isSubmitting}
+                />
+              </div>
+
+              <div className={`${formStyles.formGroup} ${styles.messageGroup}`}>
+                <label htmlFor='message'>Message</label>
+                <FontAwesomeIcon icon={faEdit} className={styles.editIcon} />
+                <textarea
+                  onChange={handleChange}
+                  name='message'
+                  id='message'
+                  value={formData.message}
+                  placeholder='Enter your message'
+                  rows={5}
+                  className={`${errorFlash && formStyles.errorHighlight}`}
+                  disabled={isSubmitting}
+                />
+              </div>
+            </StepForm>
+            {Boolean(sendStatus) && (
+              <div className={styles.toastNotif}>
+                <div className={styles.toastNotifInner}>
+                  <p>
+                    {sendStatus === 200
+                      ? "I've got your message. I'll get back to you within 24hrs. Thank you."
+                      : 'Sorry, your message could not be sent. Please try again later.'}
+                  </p>
+
+                  <button
+                    className={styles.notifBtn}
+                    onClick={() => setSendStatus('')}
+                  >
+                    OK
+                  </button>
+                </div>
+              </div>
+            )}
+
+            <div className={styles.socials}>
+              <h2>Let's get social</h2>
+              <p>Connect with me on social media.</p>
+              <ul className={styles.profileLinks}>
+                {Object.entries(siteMetadata.author.socialProfiles).map(
+                  ([key, value]) => (
+                    <li key={key} className={styles.profile}>
+                      <a
+                        href={value}
+                        target='_blank'
+                        rel='noopener noreferrer'
+                        className={`${styles.profileLink} ${styles[key]}`}
+                      >
+                        <span>{socialIcons[key]}</span>
+                        <span className={styles.networkName}>
+                          {toTitleCase(key)}
+                        </span>
+                      </a>
+                    </li>
+                  )
+                )}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </Layout>
+  )
 }
 
 export default Contact
 
 export const query = graphql`
-	query ContactPageQuery {
-		site {
-			siteMetadata {
-				title
-				author {
-					socialProfiles {
-						twitter
-						linkedIn
-						github
-					}
-				}
-			}
-		}
-	}
+  query ContactPageQuery {
+    site {
+      siteMetadata {
+        title
+        author {
+          socialProfiles {
+            twitter
+            linkedIn
+            github
+          }
+        }
+      }
+    }
+  }
 `

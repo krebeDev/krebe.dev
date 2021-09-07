@@ -1,17 +1,17 @@
 :root {
-	--baseBlue: #217aff;
-	--darkBlue: #103e7e;
-	--lightBlue: #b7d5ff;
-	--veryLightBlue: #f6faff;
-	--grey: #3b4047;
-	--lightGrey: #dee1e5;
-	--veryLightGrey: #f9f9fa;
-	--orange: #f99f20;
-	--deepOrange: #de8e1d;
-	--lightRed: #ff7569;
-	--green: #63ca1a;
-	--linkedinBlue: #2867b2;
-	--twitterBlue: #1da1f2;
-	--githubGreen: #6cc644;
-	--white: #ffffff;
+  --baseBlue: #217aff;
+  --darkBlue: #103e7e;
+  --lightBlue: #b7d5ff;
+  --veryLightBlue: #f6faff;
+  --grey: #3b4047;
+  --lightGrey: #dee1e5;
+  --veryLightGrey: #f9f9fa;
+  --orange: #f99f20;
+  --deepOrange: #de8e1d;
+  --lightRed: #ff7569;
+  --green: #63ca1a;
+  --linkedinBlue: #2867b2;
+  --twitterBlue: #1da1f2;
+  --githubGreen: #6cc644;
+  --white: #ffffff;
 }
