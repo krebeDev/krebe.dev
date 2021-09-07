@@ -1,57 +1,61 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
-	siteMetadata: {
-		title: 'krebeDev',
-		author: {
-			name: 'Solomon Ekrebe',
-			jobTitle: 'Frontend Developer',
-			bio: "I'm passionate about clean UI/UX, accessiblity and scalable apps.",
-			socialProfiles: {
-				twitter: 'https://twitter.com/krebedev',
-				linkedIn: 'https://linkedin.com/krebedev',
-				github: 'https://github.com/krebedev',
-			},
-		},
-		siteUrl: 'https://www.krebe.dev',
-		description:
-			'Frontend Developer based in Abuja, Nigeria. This is my portfolio website.',
-		twitterUserName: '@krebeDev',
-		image: './src/images/krebeDev.png',
-	},
-	plugins: [
-		'gatsby-plugin-image',
-		'gatsby-plugin-sharp',
-		'gatsby-transformer-sharp',
-		'gatsby-plugin-react-helmet',
-		'gatsby-plugin-mdx',
-		'gatsby-plugin-fontawesome-css',
+  siteMetadata: {
+    title: 'krebeDev',
+    author: {
+      name: 'Solomon Ekrebe',
+      jobTitle: 'Frontend Developer',
+      bio: "I'm passionate about clean UI/UX, accessiblity and scalable apps.",
+      socialProfiles: {
+        twitter: 'https://twitter.com/krebedev',
+        linkedIn: 'https://linkedin.com/krebedev',
+        github: 'https://github.com/krebedev',
+      },
+    },
+    siteUrl: 'https://www.krebe.dev',
+    description:
+      'Frontend Developer based in Abuja, Nigeria. This is my portfolio website.',
+    twitterUserName: '@krebeDev',
+    image: './src/images/krebeDev.png',
+  },
+  plugins: [
+    'gatsby-plugin-image',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-mdx',
+    'gatsby-plugin-fontawesome-css',
 
-		{
-			resolve: 'gatsby-source-filesystem',
-			options: {
-				name: `contents`,
-				path: `${__dirname}/contents`,
-			},
-		},
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: `contents`,
+        path: `${__dirname}/contents`,
+      },
+    },
 
-		{
-			resolve: `gatsby-source-filesystem`,
-			options: {
-				path: `${__dirname}/src/images`,
-			},
-		},
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/images`,
+      },
+    },
 
-		{
-			resolve: `gatsby-plugin-manifest`,
-			options: {
-				name: 'krebeDev',
-				short_name: 'krebeDev',
-				start_url: '/',
-				background_color: '#103e7e',
-				theme_color: '#f6faff',
-				display: 'standalone',
-				icon: './src/images/favicon.png',
-				crossOrigin: `use-credentials`,
-			},
-		},
-	],
-}
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: 'krebeDev',
+        short_name: 'krebeDev',
+        start_url: '/',
+        background_color: '#103e7e',
+        theme_color: '#f6faff',
+        display: 'standalone',
+        icon: './src/images/favicon.png',
+        crossOrigin: `use-credentials`,
+      },
+    },
+  ],
+};
