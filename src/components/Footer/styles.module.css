@@ -1,0 +1,39 @@
+.footerBar {
+  background: var(--veryLightBlue);
+  padding: 1rem 0;
+  flex-shrink: 0;
+  font-size: 0.9rem;
+}
+
+.footerInner {
+  flex-direction: column;
+}
+
+.attr {
+  order: 2;
+}
+
+.socialLinks {
+  order: 1;
+  margin-bottom: 1rem;
+}
+
+.socialLink {
+  margin: 0 0.5rem;
+  text-transform: capitalize;
+}
+
+@media (min-width: 768px) {
+  .footerInner {
+    flex-direction: row;
+  }
+
+  .attr {
+    order: 2;
+  }
+
+  .socialLinks {
+    order: 2;
+    margin-bottom: 0;
+  }
+}

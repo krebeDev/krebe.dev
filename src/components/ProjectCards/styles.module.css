@@ -1,0 +1,55 @@
+.projectList {
+  margin: 1rem 0 2rem 0;
+  align-items: stretch;
+}
+
+.projectCard {
+  position: relative;
+  margin: 3% auto;
+  text-align: center;
+  border-radius: 1rem 1rem 0.1rem 0.1rem;
+  padding: 1rem;
+  flex-basis: 100%;
+  max-width: 30rem;
+}
+
+.projectName {
+  font-size: 2rem;
+  padding: 4rem 0;
+}
+
+.projectScreen {
+  height: 0.001px;
+  overflow: hidden;
+  position: absolute;
+  top: -0.2rem;
+  left: 0;
+  transition: 0.3s;
+  border-radius: 1rem 1rem 0.1rem 0.1rem;
+}
+
+.projectCard:hover .projectScreen {
+  height: 100%;
+}
+
+.tagList {
+  opacity: 0.8;
+}
+
+.tag {
+  font-size: 0.7rem;
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 0.4rem 0.6rem;
+  text-transform: uppercase;
+  background: var(--white);
+  border-radius: 0.3rem 0.3rem 0.1rem 0.1rem;
+}
+
+@media (min-width: 768px) {
+  .projectCard {
+    flex-basis: 48%;
+    margin: 2% 0;
+    max-width: 36rem;
+  }
+}

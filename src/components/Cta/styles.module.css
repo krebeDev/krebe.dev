@@ -1,0 +1,46 @@
+.cta {
+  background: var(--veryLightBlue);
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.ctaInner {
+  margin: 2rem 0;
+  position: relative;
+  padding: 2.5rem 1rem;
+  max-width: 35rem;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 3rem 1rem;
+}
+
+.ctaInner::before {
+  content: '';
+  width: 3rem;
+  height: 0.3rem;
+  background: var(--orange);
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+
+.ctaHeading {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.ctaLink {
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .ctaInner {
+    padding: 3rem 2rem;
+    margin: 1rem auto;
+  }
+
+  .ctaInner::before {
+    width: 5rem;
+    height: 0.4rem;
+    left: 2rem;
+  }
+}

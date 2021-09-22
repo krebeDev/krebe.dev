@@ -1,0 +1,42 @@
+.blogCards {
+  margin: 1rem 0;
+}
+
+.blogCard {
+  margin: 3% auto;
+  overflow: hidden;
+  background: var(--veryLightBlue);
+}
+
+.featuredImage {
+  transition: 0.3s;
+}
+
+.blogCard:hover .featuredImage {
+  transform: scale(1.05);
+}
+
+.title {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.copy {
+  padding: 1.5rem 1.5rem 4rem 1.5rem;
+  max-width: 600px;
+}
+
+@media (min-width: 768px) {
+  .blogCards {
+    margin: 2rem 0;
+  }
+
+  .blogCards {
+    align-items: stretch;
+  }
+
+  .blogCard {
+    flex-basis: 31%;
+    margin: 0;
+  }
+}
