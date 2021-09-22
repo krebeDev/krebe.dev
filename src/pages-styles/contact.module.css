@@ -1,0 +1,172 @@
+.emailLink {
+  font-weight: 700;
+}
+
+.socials {
+  margin-top: 4rem;
+}
+
+.userEntries {
+  padding-top: 1.5rem;
+}
+
+.editButton {
+  padding: 0.5rem;
+  background: var(--lightBlue);
+  color: var(--grey);
+  border: none;
+  margin-right: 0.5rem;
+}
+
+.fieldValue {
+  margin-left: 0.5rem;
+}
+
+.profileLinks {
+  display: flex;
+  padding: 1rem 0;
+  flex-wrap: wrap;
+}
+
+.profile {
+  margin-right: 1rem;
+}
+
+.profileLink {
+  padding: 0.4rem 1rem;
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 0;
+  color: var(--veryLightGrey);
+}
+
+.networkName {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+}
+
+.github {
+  background: var(--githubGreen);
+}
+
+.github:hover {
+  background: var(--green);
+}
+
+.linkedIn {
+  background: var(--linkedinBlue);
+}
+
+.twitter {
+  background: var(--twitterBlue);
+}
+
+.profileLink:hover {
+  color: var(--veryLightGrey);
+  opacity: 0.8;
+}
+
+.editIcon {
+  margin-top: 0.5rem;
+}
+
+.messageGroup {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.toastNotif {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+  width: 100vw;
+  height: 100vh;
+  z-index: 11;
+  padding: 1rem;
+}
+
+.toastNotifInner {
+  max-width: 30rem;
+  background: var(--white);
+  padding: 1rem;
+  border-radius: 2px;
+  border-left: 5px solid var(--baseBlue);
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.notifBtn {
+  padding: 0.3rem 1.5rem;
+  margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+  .contact {
+    background: url('../images/contact-illustration.svg') no-repeat center right;
+    background-size: 50% 80%;
+  }
+
+  .contactInner {
+    width: 45%;
+  }
+  .profileLink {
+    padding: 0.6rem 1rem;
+  }
+
+  .socials {
+    margin-top: 7rem;
+  }
+}
+
+/* Form styles */
+.formGroup {
+  border-bottom: 1px solid var(--lightGrey);
+  margin: 1.5rem 0 1rem 0;
+}
+
+.errorHighlight {
+  color: var(--lightRed);
+}
+
+.errorHighlight::placeholder {
+  color: var(--lightRed);
+}
+
+textarea,
+input {
+  background: none;
+  border: none;
+  width: 80%;
+  padding: 0.5rem 0;
+  margin-left: 0.5rem;
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+  -webkit-text-fill-color: var(--grey);
+  -webkit-box-shadow: 0 0 0px 1000px var(---white) inset;
+  box-shadow: 0 0 0px 1000px var(---white) inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+textarea::-webkit-scrollbar {
+  display: none;
+}
+
+label {
+  font-size: 0.7rem;
+  display: block;
+  width: 100%;
+  opacity: 0.8;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}

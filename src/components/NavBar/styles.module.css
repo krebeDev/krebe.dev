@@ -1,0 +1,81 @@
+.navBar {
+  padding: 1rem 0;
+  background: var(--veryLightBlue);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logoAnchor {
+  width: 120px;
+}
+
+.navMenu {
+  width: 1px;
+  height: 100vh;
+  overflow: hidden;
+  transition: 0.1s width;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: var(--veryLightBlue);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.expand {
+  width: 100%;
+}
+
+.toggleButton {
+  background: none;
+  border: none;
+  position: relative;
+  z-index: 999;
+}
+
+.toggleButton span {
+  display: inline-block;
+}
+
+.hamburgerIconBox {
+  width: 1.5rem;
+}
+
+.closeIconBox {
+  width: 1.2rem;
+}
+
+.toggleButton:focus {
+  outline: none;
+}
+
+.navItem {
+  margin: 1rem auto;
+}
+
+.navLink {
+  padding: 0.2rem 0;
+  text-transform: uppercase;
+  color: var(--darkBlue);
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .hamburgerIconBox {
+    width: 2rem;
+  }
+
+  .closeIconBox {
+    width: 1.5rem;
+  }
+  .logoAnchor {
+    width: 150px;
+  }
+
+  .navLink {
+    font-size: 2rem;
+  }
+}

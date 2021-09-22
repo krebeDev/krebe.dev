@@ -1,0 +1,38 @@
+.optin {
+  padding: 1.5rem 1rem;
+  background: var(--veryLightBlue);
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.formTitle {
+  font-size: 1.2rem;
+}
+
+.guarantee {
+  display: block;
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .optin {
+    text-align: left;
+  }
+
+  .formTitle {
+    font-size: 2rem;
+  }
+}
+
+.formGroup {
+  border-bottom: 1px solid var(--lightGrey);
+  margin: 1.5rem 0 1rem 0;
+}
+
+.errorHighlight {
+  color: var(--lightRed);
+}
+
+.errorHighlight::placeholder {
+  color: var(--lightRed);
+}

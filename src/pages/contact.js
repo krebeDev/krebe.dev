@@ -13,18 +13,18 @@ import {
   faTwitter,
   faLinkedinIn,
 } from '@fortawesome/free-brands-svg-icons'
-import Layout from '../components/Layout'
-import StepForm from '../components/StepForm'
-import { validateField, toTitleCase } from '../utils'
-import * as styles from '../styles/contact.module.css'
-import * as formStyles from '../styles/form-controls.module.css'
+import Layout from './../components/Layout'
+import Stepper from './../components/Stepper'
+import validateFormField from '../utilities/validateFormField'
+import * as styles from '../pages-styles/contact.module.css'
 
 const Contact = ({ data }) => {
-  const [formData, setFormData] = useState({
+  const initialState = {
     name: '',
     email: '',
     message: '',
-  })
+  }
+  const [formData, setFormData] = useState(initialState)
 
   const [step, setStep] = useState(0)
   const [errorFlash, setErrorFlash] = useState(false)
@@ -43,7 +43,7 @@ const Contact = ({ data }) => {
   const handleValidation = () => {
     const field = formFields[step]
     const value = formData[field]
-    const isValid = validateField(field, value)
+    const isValid = validateFormField(field, value)
     setErrorFlash((currentState) => (!isValid ? true : currentState))
     return isValid
   }
@@ -76,11 +76,7 @@ const Contact = ({ data }) => {
         process.env.GATSBY_EMAILJS_USER_ID
       )
       setSendStatus(() => sendMessage.status)
-      setFormData({
-        name: '',
-        email: '',
-        message: '',
-      })
+      setFormData(initialState)
     } catch (error) {
       setSendStatus(() => error.status)
     } finally {
@@ -108,13 +104,13 @@ const Contact = ({ data }) => {
   return (
     <Layout>
       <Helmet title={`Contact | ${siteMetadata.title}`} />
-      <section>
+      <section className={styles.contact}>
         <div className={`container`}>
           <h1>Get in touch</h1>
           <div className={`${styles.contactInner}`}>
             <p>
-              If you have any queries for me or want to discuss an excellent
-              project or collaboration please{' '}
+              Thanks for taking the time to reach out. Got any question or an
+              idea?{' '}
               <a href='mailto:solomon@krebe.dev' className={styles.emailLink}>
                 send me an email
               </a>{' '}
@@ -143,10 +139,8 @@ const Contact = ({ data }) => {
                 </button>
               )}
             </div>
-            <StepForm
-              {...{ step, nextStepHandler, handleSubmit, isSubmitting }}
-            >
-              <div className={formStyles.formGroup}>
+            <Stepper {...{ step, nextStepHandler, handleSubmit, isSubmitting }}>
+              <div className={styles.formGroup}>
                 <label htmlFor='name'>Name</label>
                 <FontAwesomeIcon icon={faUserAlt} />
                 <input
@@ -156,12 +150,12 @@ const Contact = ({ data }) => {
                   name='name'
                   id='name'
                   placeholder='Enter your name'
-                  className={`${errorFlash && formStyles.errorHighlight}`}
+                  className={`${errorFlash && styles.errorHighlight}`}
                   disabled={isSubmitting}
                 />
               </div>
 
-              <div className={formStyles.formGroup}>
+              <div className={styles.formGroup}>
                 <label htmlFor='email'>Email Address</label>
                 <FontAwesomeIcon icon={faEnvelope} />
                 <input
@@ -171,12 +165,12 @@ const Contact = ({ data }) => {
                   placeholder='Enter your email address'
                   name='email'
                   id='email'
-                  className={`${errorFlash && formStyles.errorHighlight}`}
+                  className={`${errorFlash && styles.errorHighlight}`}
                   disabled={isSubmitting}
                 />
               </div>
 
-              <div className={`${formStyles.formGroup} ${styles.messageGroup}`}>
+              <div className={`${styles.formGroup} ${styles.messageGroup}`}>
                 <label htmlFor='message'>Message</label>
                 <FontAwesomeIcon icon={faEdit} className={styles.editIcon} />
                 <textarea
@@ -186,11 +180,11 @@ const Contact = ({ data }) => {
                   value={formData.message}
                   placeholder='Enter your message'
                   rows={5}
-                  className={`${errorFlash && formStyles.errorHighlight}`}
+                  className={`${errorFlash && styles.errorHighlight}`}
                   disabled={isSubmitting}
                 />
               </div>
-            </StepForm>
+            </Stepper>
             {Boolean(sendStatus) && (
               <div className={styles.toastNotif}>
                 <div className={styles.toastNotifInner}>
@@ -224,9 +218,7 @@ const Contact = ({ data }) => {
                         className={`${styles.profileLink} ${styles[key]}`}
                       >
                         <span>{socialIcons[key]}</span>
-                        <span className={styles.networkName}>
-                          {toTitleCase(key)}
-                        </span>
+                        <span className={styles.networkName}>{key}</span>
                       </a>
                     </li>
                   )

@@ -1,6 +1,6 @@
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
-});
+})
 
 module.exports = {
   siteMetadata: {
@@ -20,7 +20,27 @@ module.exports = {
       'Frontend Developer based in Abuja, Nigeria. This is my portfolio website.',
     twitterUserName: '@krebeDev',
     image: './src/images/krebeDev.png',
+
+    navMenu: [
+      {
+        title: 'About',
+        menuLink: '/about',
+      },
+      {
+        title: 'Projects',
+        menuLink: '/portfolio',
+      },
+      {
+        title: 'Blog',
+        menuLink: '/blog',
+      },
+      {
+        title: 'Contact',
+        menuLink: '/contact',
+      },
+    ],
   },
+
   plugins: [
     'gatsby-plugin-image',
     'gatsby-plugin-sharp',
@@ -58,4 +78,4 @@ module.exports = {
       },
     },
   ],
-};
+}
