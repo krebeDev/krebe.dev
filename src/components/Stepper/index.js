@@ -1,5 +1,5 @@
 import React from 'react'
-import { buttonStyles } from '../button/styles.module.css'
+import { buttonStyles } from '../Button/styles.module.css'
 
 const Stepper = (props) => {
   const { children, step, nextStepHandler, handleSubmit, isSubmitting } = props

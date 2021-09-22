@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
 import Layout from '../Layout'
 import Recommends from '../Recommends'
-import { buttonStyles } from '../button/styles.module.css'
+import { buttonStyles } from '../Button/styles.module.css'
 import * as styles from './styles.module.css'
 
 const Project = ({ data, pageContext }) => {
