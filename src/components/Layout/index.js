@@ -1,4 +1,6 @@
 import React from 'react'
+import '@fontsource/roboto'
+import '@fontsource/roboto/700.css'
 import NavBar from '../NavBar'
 import FooterBar from '../Footer'
 import Seo from '../Seo'
