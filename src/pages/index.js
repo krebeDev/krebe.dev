@@ -39,7 +39,6 @@ const HomePage = ({ data }) => {
               width={670}
               height={670}
               className={styles.avatar}
-              style={{ border: 'red', fontFamily: '' }}
             />
           </div>
         </div>
