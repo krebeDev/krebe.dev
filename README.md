@@ -1,6 +1,6 @@
 ## krebeDev's website
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/9b2d8f13-07d3-4b98-baf0-beb274e755cd/deploy-status)](https://app.netlify.com/sites/surafel/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8af9a736-fca6-4b5a-b67d-a55c61334b07/deploy-status)](https://app.netlify.com/sites/krebedev/deploys)
 
 This repo is home to the source code of my personal website.
 
