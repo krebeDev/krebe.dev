@@ -21,7 +21,7 @@ const HomePage = ({ data }) => {
             <p>
               I build elegant and efficient{' '}
               <Link to='/portfolio' className={styles.link}>
-                frontend products
+                web and mobile apps
               </Link>{' '}
               that provide excellent user experiences.
             </p>
