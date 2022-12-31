@@ -1,3 +1,9 @@
+.contact {
+  padding: 2rem 1rem;
+  background: var(--veryLightBlue);
+  min-height: calc(100vh - 115px);
+}
+
 .emailLink {
   font-weight: 700;
 }
@@ -105,14 +111,13 @@
 }
 
 @media (min-width: 768px) {
-  .contact {
-    background: url('../images/contact-illustration.svg') no-repeat center right;
-    background-size: 50% 80%;
+  .contactInner {
+    max-width: 800px;
+    margin: auto;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 4rem;
   }
 
-  .contactInner {
-    width: 45%;
-  }
   .profileLink {
     padding: 0.6rem 1rem;
   }
