@@ -18,7 +18,7 @@ const Stepper = (props) => {
 
       {!isLastStep && (
         <button onClick={stepHandler} type='button' className={buttonStyles}>
-          Next
+          Next <span>&#8594;</span>
         </button>
       )}
 
