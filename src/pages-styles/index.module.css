@@ -11,12 +11,18 @@
 
 .heroHeading {
   font-size: 1.8rem;
-  margin-bottom: 0.7rem;
+  margin-bottom: 0.8rem;
   color: var(--baseBlue);
+  line-height: 1.2;
 }
 
 .highlight {
   color: var(--darkBlue);
+}
+
+.link {
+  color: var(--baseBlue);
+  font-weight: 500;
 }
 
 .heroCopy {
@@ -25,8 +31,12 @@
   text-align: center;
 }
 
-.heroCta {
-  margin-top: 2rem;
+.heroCopy p {
+  margin-bottom: 0.8rem;
+}
+
+.heroCta p {
+  margin-bottom: 2rem;
 }
 
 .sectionTitle {
@@ -93,7 +103,7 @@
   }
 
   .heroCopy {
-    flex-basis: 40%;
+    flex-basis: 45%;
     order: 1;
     text-align: left;
   }
@@ -113,10 +123,6 @@
     height: 100%;
     right: -3rem;
     top: 3rem;
-  }
-
-  .heroCta {
-    margin-top: 8rem;
   }
 }
 
