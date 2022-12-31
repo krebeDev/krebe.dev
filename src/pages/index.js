@@ -31,8 +31,8 @@ const HomePage = ({ data }) => {
               <Link to='/blog' className={styles.link}>
                 blog
               </Link>{' '}
-              about tech and fitness. What a mix, you may wonder. But there's
-              even a little more{' '}
+              about tech and fitness. What a combo, you might wonder. But
+              there's even a little more{' '}
               <Link to='/about' className={styles.link}>
                 about me
               </Link>

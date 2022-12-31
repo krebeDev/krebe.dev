@@ -19,7 +19,7 @@ module.exports = {
     description:
       'Frontend Developer based in Abuja, Nigeria. This is my portfolio website.',
     twitterUserName: '@krebeDev',
-    image: './src/images/krebeDev.png',
+    image: './src/images/desktop-preview.png',
 
     navMenu: [
       {
