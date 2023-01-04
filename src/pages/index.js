@@ -41,7 +41,7 @@ const HomePage = ({ data }) => {
 
             <div className={styles.heroCta}>
               <p>Am I the droid you're looking for?</p>
-              <Button pathname={'/contact'} title={"Let's talk!"} />
+              <Button pathname={'/contact'} title={"Let's chat!"} />
             </div>
           </article>
 
