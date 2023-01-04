@@ -17,7 +17,7 @@ module.exports = {
     },
     siteUrl: 'https://www.krebe.dev',
     description:
-      'Frontend Developer based in Abuja, Nigeria. This is my portfolio website.',
+      'Frontend developer, avid learner, and lover of all things tech. Building delightful, user-friendly, and accessible web and mobile apps that drive business results.',
     twitterUserName: '@krebeDev',
     image: './src/images/desktop-preview.png',
 
