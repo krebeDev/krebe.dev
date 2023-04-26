@@ -39,7 +39,7 @@ const Projects = ({ data }) => {
       <Helmet title={`Projects | ${data.site.siteMetadata.title}`} />
       <section>
         <div className={`container`}>
-          <h1>Frontend Developer Portfolio</h1>
+          <h1>Software Developer Portfolio</h1>
           <p>
             A collection of my featured projects. You can find more of my work
             on{' '}
