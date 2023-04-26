@@ -7,7 +7,7 @@ module.exports = {
     title: 'krebeDev',
     author: {
       name: 'Solomon Ekrebe',
-      jobTitle: 'Frontend Developer',
+      jobTitle: 'Full Stack Developer',
       bio: "I'm passionate about clean UI/UX, accessiblity and scalable apps.",
       socialProfiles: {
         twitter: 'https://twitter.com/krebedev',
@@ -17,7 +17,7 @@ module.exports = {
     },
     siteUrl: 'https://www.krebe.dev',
     description:
-      'Frontend developer, avid learner, and lover of all things tech. Building delightful, user-friendly, and accessible web and mobile apps that drive business results.',
+      'Full Stack Developer, avid learner, and lover of all things tech. Building delightful, user-friendly, and accessible web and mobile apps that drive business results.',
     twitterUserName: '@krebeDev',
     image: './src/images/desktop-preview.png',
 
